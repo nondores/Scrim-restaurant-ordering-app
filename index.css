@@ -380,3 +380,21 @@ i {
     text-align: center;
     font-size: 0.7rem;
 }
+
+
+/* PHONE */
+
+@media (max-width: 480px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-subs {
+        margin-left: 0;
+    }
+
+    .order-items {
+        grid-template-columns: 1fr auto;
+    }
+}
