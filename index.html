@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    <title>Restaurant Ordering App</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img
+                src="https://kelas-work.s3.ap-southeast-1.amazonaws.com/bucket-prod-98123hsandknaknd1u3/upload/files/img/blog_cover/blogcover-xgk63bfdb994ffcf.webp"
+                alt=" food image"
+                class="cover-img"
+            />
+            <div class="overlay-text">
+                <h1>Sogar's Dinner</h1>
+                <p>The fresher & best food in town.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-section">
+                <h2>Menu</h2>
+                <div class="menu" id="menu">
+                    <!-- Menu items will be dynamically inserted here --> 
+                </div>
+        </section>
+        
+        <section class="order-section" style="display: none;">
+            <div class="order-summary">
+                <h2>Your Order</h2>
+
+                <ul class="order-list" id="order-list"></ul>
+
+                <div class="order-footer">
+                    <div class="total-row">
+                        <strong>Total price</strong>
+                        <span id="order-total">$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="btn-primary">Complete Order</button>
+                </div>
+             </div>
+        </section>
+
+        <section class="card-details">
+            <button id="close-card-btn" class="remove-btn-card" aria-label="Remove card option">&times;</button>
+            <h2>Enter card details</h2>
+            <form id="card-form">
+                <div class="form-group">
+                    <label for="card-holder">Card Holder</label>
+                    <input 
+                        type="text" 
+                        placeholder="Enter your name" 
+                        id="card-holder" 
+                        name="card-holder" 
+                        required
+                        />
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input
+                        type="text"
+                        id="card-number"
+                        name="card-number"
+                        placeholder="1233 9502 xxxx xxxx"
+                        maxlength="19"
+                        inputmode="numeric"
+                        autocomplete="cc-number"
+                        required
+                        />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input 
+                            type="text" 
+                            placeholder="MM/YY" 
+                            id="expiry-date" 
+                            name="expiry-date"  
+                            maxlength="5" 
+                            required
+                            />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input 
+                            type="text" 
+                            placeholder="123" 
+                            id="cvv" 
+                            name="cvv" 
+                            maxlength="3"  
+                            inputmode="numeric" 
+                            autocomplete="cc-csc"
+                            required
+                            />
+                    </div>
+                </div>
+                <button type="submit" class="pay-btn" id="pay-btn">Pay Now</button>
+            </form>
+        </section>
+        <section class="payment-successful" style="display: none;">
+            <div class="message-container" id="message-container">
+            </div>
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
