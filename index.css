@@ -385,16 +385,49 @@ i {
 /* PHONE */
 
 @media (max-width: 480px) {
-    .menu-item {
+
+    /* Payment Modal */
+
+    .card-details {
+        width: 95%;
+        max-width: 95%;
+        padding: 18px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-details h2 {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+
+    #card-form {
+        gap: 14px;
+    }
+
+    .form-row {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 14px;
     }
 
-    .item-subs {
-        margin-left: 0;
+    #card-form label {
+        font-size: 0.75rem;
     }
 
-    .order-items {
-        grid-template-columns: 1fr auto;
+    #card-form input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
     }
+
+    .pay-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .remove-btn-card {
+        font-size: 1.8rem;
+        top: -18px;
+        left: 95%;
+    }
+
 }
